@@ -18,8 +18,8 @@ public class AddToCart {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Karthick\\eclipse-workspace\\Selenium\\Drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get(url);
-		driver.manage().window().maximize();
-		
+	
+				
 	}
 
 	@When("^the user added items \"([^\"]*)\" , \"([^\"]*)\" , \"([^\"]*)\" to cart$")
@@ -50,9 +50,10 @@ public class AddToCart {
 		Assert.assertTrue(product2.contains(item2));
 		Assert.assertTrue(product3.contains(item3));
 
-		
+		driver.close();
 	}	
 	
+
 }
 
 
